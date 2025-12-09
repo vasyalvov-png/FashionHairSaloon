@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber & Fashion - Студия Стиля</title>
+    
+    <link rel="icon" href="https://logowik.com/content/uploads/images/hair-salon3292.logowik.com.webp" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="burger-toggle" class="burger-toggle">
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <i class="fas fa-cut fa-2x" style="color:var(--primary-color)"></i>
+                <h1 class="titles">Fashion<span style="color:var(--primary-color)">.</span></h1>
+            </div>
+
+            <nav class="main-nav desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-links active">Главная</a></li>
+                    <li><a href="booking.html" class="nav-links">Запись</a></li>
+
+                    <li class="notification-wrapper">
+                        <i class="fas fa-bell nav-links" id="notifyBtn"></i>
+                        <span class="badge" id="notifyCounter">0</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <label for="burger-toggle" class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </label>
+        </div>
+    </header>
+
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="nav-links">Главная</a></li>
+            <li><a href="#about" class="nav-links">О нас</a></li>
+            <li><a href="#gallery" class="nav-links">Портфолио</a></li>
+            <li><a href="booking.html" class="nav-links">Онлайн запись</a></li>
+        </ul>
+    </nav>
+
+    <button id="drawModeBtn" class="floating-btn" title="Включить шлейф">✨</button>
+
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">Искусство вашего стиля</h2>
+                <p class="hero-subtitle" style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Премиальные стрижки и уход в центре города.</p>
+                <a href="booking.html" class="hero-btn">Записаться на визит</a>
+            </div>
+        </section>
+
+        <section class="safe-links-area" id="contents" style="max-width: 800px; margin: 40px auto; text-align: center;">
+            <h3>Где нас найти ?</h3>
+            <p style="margin-bottom: 15px; color: #666;">Перед переходом мы уточним ваше желание:</p>
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <a href="https://google.com">Найти нас в Google</a>
+                <a href="https://yandex.ru">Найти на Yandex</a>
+            </div>
+        </section>
+
+        <section id="gallery-view" class="gallery-section">
+            <h2 class="section-title">Тренды сезона</h2>
+            
+            <div class="gallery-viewer">
+                <div class="main-photo-container">
+                    <img id="mainImage" 
+                         src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Трендовая стрижка">
+                </div>
+                
+                <div class="thumbnails-grid" id="thumbsContainer">
+                    
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             data-full="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             class="thumb active" alt="Мужской стиль">
+                    </div>
+                    
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             data-full="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             class="thumb" alt="Женский стиль">
+                    </div>
+                    
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             data-full="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             class="thumb" alt="Процесс">
+                    </div>
+
+                    <div class="thumb-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Yq7xV18cDYbeqPGW3qkegmhguHqWIZt9UQ&s" 
+                             data-full="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5Yq7xV18cDYbeqPGW3qkegmhguHqWIZt9UQ&s" 
+                             class="thumb" alt="Инструменты">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" style="text-align: center; position: relative;">
+            <h3 style="color: var(--primary-color);">Калькулятор</h3>
+            <p>Выберите длину ваших волос, чтобы узнать примерное время работы.</p>
+            
+            <div id="slider" class="slider-container" style="position: relative; z-index: 10;">
+                <div class="slider-track">
+                    <div class="slider-thumb"></div>
+                </div>
+                <p style="margin-top: 15px; font-weight: bold; font-size: 1.2rem;">
+                    Длина: <span id="sliderValue">0</span> см
+                </p>
+                <p id="timeEstimate" style="color: #777; font-size: 0.9rem; min-height: 20px;"></p>
+            </div>
+
+            <div id="field" class="center-test-area" style="display: none; opacity: 0; transition: opacity 0.5s;">
+                <p style="position: absolute; top: 10px; width: 100%; color: #fff; pointer-events: none;">
+                    Ого! Длинные волосы — сложная работа.<br>Поймайте купон на скидку, чтобы компенсировать время!
+                </p>
+                <div id="ball" class="centered-img" style="cursor: pointer;">-20%</div>
+            </div>
+            
+            
+        </section>
+
+        <h2 id="services" class="section-title">Наши услуги</h2>
+        <section class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Мужская стрижка">
+                </div>
+                <h3>Барбер-сервис</h3>
+                <p>Классика и фейд. От 1500 ₽</p>
+                <a href="booking.html" class="service-btn">Выбрать</a>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Женская стрижка">
+                </div>
+                <h3>Стилист</h3>
+                <p>Стрижки и укладки. От 2000 ₽</p>
+                <a href="booking.html" class="service-btn">Выбрать</a>
+            </div>
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Бритье">
+                </div>
+                <h3>Королевское бритье</h3>
+                <p>Опасная бритва. От 1200 ₽</p>
+                <a href="booking.html" class="service-btn">Выбрать</a>
+            </div>
+        </section>
+
+        <h2 id="gallery" class="section-title">Портфолио</h2>
+        <section class="gallery-section">
+           <div class="gallery-grid">
+                <div class="gallery-item tall">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Работа 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Работа 2">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.lTmmGnQ96-XN8_BuH13DegHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Работа 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Работа 4">
+                </div>
+                <div class="gallery-item big"> 
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.O0H1oa86_lLHJcZrQRoJpwHaE7?w=800&h=533&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Работа 5">
+                </div>
+                <div class="gallery-item">
+                     <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Работа 6">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="backToTop" title="Наверх"><i class="fas fa-arrow-up"></i></button>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Fashion.</h3>
+                    <p>Создаем стиль, который говорит за вас.</p>
+                </div>
+                <div>
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="booking.html">Запись</a></li>
+                        <li><a href="#" id="loginBtn" class="nav-links">Staff Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Мы в соцсетях</h4>
+                    <div class="social-icons">
+                        <a href="https://vk.com" class="social-icon"><i class="fab fa-vk"></i></a>
+                        <a href="https://web.telegram.org/" class="social-icon"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p style="text-align: center; margin-top: 40px;">© 2025 Fashion Studio.ИКБО23-24 Львов Василий Степанович</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

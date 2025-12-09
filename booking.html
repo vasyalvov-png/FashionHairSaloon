@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись - Fashion Studio</title>
+    
+    <link rel="icon" href="https://logowik.com/content/uploads/images/hair-salon3292.logowik.com.webp" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+
+    <header class="header">
+       <div class="header-container">
+            <div class="logo-container">
+                 <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-cut fa-2x" style="color:var(--primary-color)"></i>
+                    <h1 class="titles">Fashion<span style="color:var(--primary-color)">.</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-links">Главная</a></li>
+                    <li><a href="booking.html" class="nav-links active" style="color: var(--primary-color);">Запись</a></li>
+                    <li class="notification-wrapper">
+                        <i class="fas fa-bell nav-links" id="notifyBtn"></i>
+                        <span class="badge" id="notifyCounter">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content-wide">
+        <h1 class="page-title" style="text-align:center; margin-bottom:40px; font-family: var(--font-heading);">Оформление визита</h1>
+        
+        <section class="extended-form-section" style="border: 1px solid #eee;">
+            <h2 style="text-align: center; margin-bottom: 20px;">1. Соберите свой комплекс услуг</h2>
+            <p style="text-align: center; color: #777; margin-bottom: 30px;">Перетащите карточки услуг в зону записи:</p>
+            
+            <div class="draggable-source" id="draggableSource">
+                <div class="draggable-item" data-id="1" data-name="Стрижка" data-price="2000">
+                    
+                    <strong>Стрижка</strong><br>2000₽
+                </div>
+                <div class="draggable-item" data-id="2" data-name="Бритье" data-price="1500">
+                    
+                    <strong>Бритье</strong><br>1500₽
+                </div>
+                <div class="draggable-item" data-id="3" data-name="Укладка" data-price="1000">
+                    
+                    <strong>Укладка</strong><br>1000₽
+                </div>
+            </div>
+
+
+            <div id="cart-items" class="cart-grid droppable cart-section">
+                <p style="width:100%; text-align:center; color:#aaa; margin-top:20px;">
+                    <i class="fas fa-inbox fa-3x" style="opacity: 0.3; margin-bottom: 10px;"></i><br>
+                    Перетащите услуги сюда
+                </p>
+            </div>
+
+            <div class="cart-total" style="text-align: right; margin-top: 20px; font-size: 1.2rem;">
+                
+                <div class="coupon-block">
+                    <input type="text" id="couponInput" placeholder="Промокод" class="coupon-input">
+                    <button id="applyCouponBtn" class="form-btn coupon-btn">Применить</button>
+                </div>
+                <p id="couponMessage" class="coupon-message"></p>
+
+                <h3 style="margin-top: 15px;">
+                    Итого: 
+                    <span id="oldPrice" class="old-price" style="display:none;"></span>
+                    <span id="cartTotalValue" style="color:var(--primary-color)">0</span> ₽
+                </h3>
+                
+                <button id="clearCartBtn" class="form-btn" style="background: transparent; border-color: #999; color: #999; font-size: 0.8rem; margin-top: 10px;">Очистить список</button>
+            </div>
+        </section>
+
+        <div class="extended-form-section">
+            <h3 style="margin-bottom: 15px;">2. Выберите Топ-Мастера (Множественный выбор через Ctrl)</h3>
+            <ul id="styleList" class="selectable-list">
+                <li class="selectable-item"><span>Александр (Top Barber)</span> <i class="fas fa-star" style="color:gold"></i></li>
+                <li class="selectable-item"><span>Елена (Colorist)</span> <i class="fas fa-paint-brush" style="color:#aaa"></i></li>
+                <li class="selectable-item"><span>Дмитрий (Stylist)</span> <i class="fas fa-cut" style="color:#aaa"></i></li>
+                <li class="selectable-item"><span>Сергей (Beard Pro)</span> <i class="fas fa-user-tie" style="color:#aaa"></i></li>
+            </ul>
+        </div>
+
+        <section class="glass-container">
+            <h3 style="text-align: center; margin-bottom: 20px;">3. Завершение записи</h3>
+            <form id="extended-booking-form" class="extended-form">
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Ваше имя</label>
+                    <input type="text" id="fullname" name="fullname" required placeholder="Имя Фамилия">
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="phone" class="form-label">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="datetime" class="form-label">Желаемое время</label>
+                    <input type="datetime-local" id="datetime" name="datetime" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="form-btn submit-btn" style="width: 100%;">Подтвердить запись</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fashion Studio. Все права защищены. ИКБО23-24 Львов Василий Степанович</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

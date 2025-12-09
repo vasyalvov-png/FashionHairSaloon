@@ -1,0 +1,70 @@
+.main-content-wide {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.extended-form-section {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.form-fieldset {
+    border: 1px solid #f2a6a6;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.form-legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafafa;
+}
+
+.form-group input:focus, .form-textarea:focus {
+    border-color: #ff6b8b;
+    outline: none;
+    background: white;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: #fff6f6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-card h3 { color: #ff6b8b; margin-bottom: 10px; }
+.info-card ul { padding-left: 20px; }
