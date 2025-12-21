@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Fashion Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-cut fa-2x" style="color:var(--primary-color)"></i>
+                    <h1 class="titles">Fashion<span style="color:var(--primary-color)">.</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-links">Главная</a></li>
+                    <li><a href="booking.html"class="nav-links">Запись</a></li>
+                    <li><a href="services.html" class="nav-links">Услуги</a></li>
+                    <li><a href="about.html" class="nav-links">О нас</a></li>
+                    <li><a href="contacts.html" class="nav-links active" style="color: var(--primary-color);">Контакты</a></li>
+                    <li class="notification-wrapper">
+                        <i class="fas fa-bell nav-links" id="notifyBtn"></i>
+                        <span class="badge" id="notifyCounter">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content-wide">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+
+        <div class="info-cards" style="margin-bottom: 50px;">
+            <div class="info-card">
+                <h3><i class="fas fa-map-marker-alt"></i> Адрес</h3>
+                <p>ул. Стильная, д. 15<br>Центральный район, Москва</p>
+            </div>
+            <div class="info-card">
+                <h3><i class="fas fa-clock"></i> График работы</h3>
+                <p>Пн-Пт: 10:00 — 22:00<br>Сб-Вс: 09:00 — 21:00</p>
+            </div>
+            <div class="info-card">
+                <h3><i class="fas fa-phone"></i> Телефон & Email</h3>
+                <p>+7 (999) 000-00-00<br>hello@fashion-studio.ru</p>
+            </div>
+        </div>
+
+        <section class="extended-form-section">
+            <h3 style="text-align: center; margin-bottom: 30px;">Оставить отзыв или задать вопрос</h3>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label class="form-label">Ваше имя</label>
+                    <input type="text" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label class="form-label">Ваше сообщение</label>
+                    <textarea class="form-textarea" rows="5" placeholder="Введите ваш текст здесь..."></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="hero-btn" style="width: 100%;">Отправить сообщение</button>
+                </div>
+            </form>
+        </section>
+
+        <div style="width: 100%; height: 400px; background: #eee; border-radius: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; border: 1px solid #ddd;">
+            <div style="text-align: center; color: #888;">
+                <i class="fas fa-map-marked-alt fa-4x" style="margin-bottom: 15px;"></i>
+                <p>Интерактивная карта скоро появится</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="footer-container">
+            <p style="text-align: center;">© 2025 Fashion Studio. Мы всегда на связи.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>
