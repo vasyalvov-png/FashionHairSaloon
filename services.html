@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Fashion Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-cut fa-2x" style="color:var(--primary-color)"></i>
+                    <h1 class="titles">Fashion<span style="color:var(--primary-color)">.</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-links">Главная</a></li>
+                    <li><a href="booking.html" class="nav-links">Запись</a></li>
+                    <li><a href="services.html" class="nav-links active" style="color: var(--primary-color);">Услуги</a></li>
+                    <li><a href="about.html" class="nav-links">О нас</a></li>
+                    <li class="notification-wrapper">
+                        <i class="fas fa-bell nav-links" id="notifyBtn"></i>
+                        <span class="badge" id="notifyCounter">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-title">
+            <h2 style="font-family: var(--font-heading);">Наш Прайс-лист</h2>
+            <p style="text-align: center; color: #666; margin-top: 10px;">Премиальный уход для каждого гостя</p>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Мужской сервис">
+                </div>
+                <h3>Мужской зал</h3>
+                <ul style="padding: 20px; text-align: left; font-size: 0.9rem;">
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Стрижка машинкой</span> <strong>1000 ₽</strong></li>
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Моделирование бороды</span> <strong>1200 ₽</strong></li>
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Комплекс "Папа + Сын"</span> <strong>3000 ₽</strong></li>
+                </ul>
+                <a href="booking.html" class="service-btn">Записаться</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Женский сервис">
+                </div>
+                <h3>Женский зал</h3>
+                <ul style="padding: 20px; text-align: left; font-size: 0.9rem;">
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Сложное окрашивание</span> <strong>от 5000 ₽</strong></li>
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Вечерняя укладка</span> <strong>2500 ₽</strong></li>
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Уход Olaplex</span> <strong>3500 ₽</strong></li>
+                </ul>
+                <a href="booking.html" class="service-btn">Записаться</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Уход">
+                </div>
+                <h3>SPA-ритуалы</h3>
+                <ul style="padding: 20px; text-align: left; font-size: 0.9rem;">
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Массаж головы</span> <strong>800 ₽</strong></li>
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Черная маска</span> <strong>1000 ₽</strong></li>
+                    <li style="display:flex; justify-content:space-between; margin-bottom:10px;"><span>Пилинг кожи головы</span> <strong>1500 ₽</strong></li>
+                </ul>
+                <a href="booking.html" class="service-btn">Записаться</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="footer-container">
+            <p style="text-align: center;">© 2025 Fashion Studio. Искусство в деталях.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О студии - Fashion Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-cut fa-2x" style="color:var(--primary-color)"></i>
+                    <h1 class="titles">Fashion<span style="color:var(--primary-color)">.</span></h1>
+                </a>
+            </div>
+            <nav class="main-nav desktop-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-links">Главная</a></li>
+                    <li><a href="booking.html" class="nav-links">Запись</a></li>
+                    <li><a href="services.html" class="nav-links">Услуги</a></li>
+                    <li><a href="about.html" class="nav-links active" style="color: var(--primary-color);">О нас</a></li>
+                    <li class="notification-wrapper">
+                        <i class="fas fa-bell nav-links" id="notifyBtn"></i>
+                        <span class="badge" id="notifyCounter">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); height: 50vh;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2 class="hero-title">Наша Философия</h2>
+            </div>
+        </section>
+
+        <section style="max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center;">
+            <p style="font-size: 1.1rem; line-height: 1.8;">
+                Fashion Studio — это не просто парикмахерская. Это пространство, где классические традиции барберинга встречаются с современными трендами высокой моды. Основанная в 2015 году, наша студия объединила лучших мастеров города под одной крышей.
+            </p>
+        </section>
+
+        <section class="gallery-section">
+            <h2 class="section-title">Наши Топ-Мастера</h2>
+            <p style="text-align:center; margin-bottom: 20px; color: #888;">Выберите мастера, чтобы узнать больше (Ctrl для выбора нескольких)</p>
+            <ul id="styleList" class="selectable-list">
+                <li class="selectable-item">
+                    <span><strong>Александр</strong> — Основатель & Шеф-барбер</span>
+                    <i class="fas fa-award" style="color:gold"></i>
+                </li>
+                <li class="selectable-item">
+                    <span><strong>Елена</strong> — Арт-директор, колорист</span>
+                    <i class="fas fa-star" style="color:gold"></i>
+                </li>
+                <li class="selectable-item">
+                    <span><strong>Дмитрий</strong> — Эксперт по мужскому стилю</span>
+                    <i class="fas fa-check-circle" style="color:#28a745"></i>
+                </li>
+                <li class="selectable-item">
+                    <span><strong>Сергей</strong> — Профессиональный барбер</span>
+                    <i class="fas fa-check-circle" style="color:#28a745"></i>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="footer-container">
+            <p style="text-align: center;">© 2025 Fashion Studio. Мы создаем ваш образ.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

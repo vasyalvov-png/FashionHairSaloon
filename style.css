@@ -1,4 +1,4 @@
-/* === ПРАКТИЧЕСКАЯ 7: Переменные === */
+
 :root {
     --primary-color: #d4af37; /* Золотой для премиум вида */
     --primary-dark: #b4941f;
@@ -13,7 +13,6 @@
     --header-height: 80px;
 }
 
-/* === База === */
 a, button, .gallery-item { cursor: pointer; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }

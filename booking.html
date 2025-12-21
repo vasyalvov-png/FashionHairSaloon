@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Запись - Fashion Studio</title>
-    
-    <link rel="icon" href="https://logowik.com/content/uploads/images/hair-salon3292.logowik.com.webp" type="image/png">
-    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="form-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <script src="script.js"></script>
     <div class="background-shape shape-1"></div>
     <div class="background-shape shape-2"></div>
 
@@ -28,7 +24,10 @@
             <nav class="main-nav desktop-nav">
                 <ul>
                     <li><a href="index.html" class="nav-links">Главная</a></li>
-                    <li><a href="booking.html" class="nav-links active" style="color: var(--primary-color);">Запись</a></li>
+                    <li><a href="booking.html"class="nav-links active" style="color: var(--primary-color);">Запись</a></li>
+                    <li><a href="services.html" class="nav-links">Услуги</a></li>
+                    <li><a href="about.html" class="nav-links">О нас</a></li> <li>
+
                     <li class="notification-wrapper">
                         <i class="fas fa-bell nav-links" id="notifyBtn"></i>
                         <span class="badge" id="notifyCounter">0</span>
@@ -60,6 +59,10 @@
                 </div>
             </div>
 
+            <div class="cart-controls" style="justify-content: center;">
+                <button type="button" class="filter-btn" id="sortAscBtn">Сорт по цене (min)</button>
+                <button type="button" class="filter-btn" id="filterBtn">Только премиум (>1800₽)</button>
+            </div>
 
             <div id="cart-items" class="cart-grid droppable cart-section">
                 <p style="width:100%; text-align:center; color:#aaa; margin-top:20px;">
@@ -69,19 +72,7 @@
             </div>
 
             <div class="cart-total" style="text-align: right; margin-top: 20px; font-size: 1.2rem;">
-                
-                <div class="coupon-block">
-                    <input type="text" id="couponInput" placeholder="Промокод" class="coupon-input">
-                    <button id="applyCouponBtn" class="form-btn coupon-btn">Применить</button>
-                </div>
-                <p id="couponMessage" class="coupon-message"></p>
-
-                <h3 style="margin-top: 15px;">
-                    Итого: 
-                    <span id="oldPrice" class="old-price" style="display:none;"></span>
-                    <span id="cartTotalValue" style="color:var(--primary-color)">0</span> ₽
-                </h3>
-                
+                <h3>Итого к оплате: <span id="cartTotalValue" style="color:var(--primary-color)">0</span> ₽</h3>
                 <button id="clearCartBtn" class="form-btn" style="background: transparent; border-color: #999; color: #999; font-size: 0.8rem; margin-top: 10px;">Очистить список</button>
             </div>
         </section>
@@ -122,7 +113,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-bottom">
-                <p>&copy; 2025 Fashion Studio. Все права защищены. ИКБО23-24 Львов Василий Степанович</p>
+                <p>&copy; 2025 Fashion Studio. Все права защищены.</p>
             </div>
         </div>
     </footer>
